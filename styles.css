@@ -47,7 +47,7 @@ body {
   .result-box {
     margin-top: 20px;
     padding: 20px;
-    background-color: hwb(0 100% 0%);
+    background-color: #1b1818;
     border: 2px solid #ccc;
     border-radius: 1px;
     font-size: 20px;
