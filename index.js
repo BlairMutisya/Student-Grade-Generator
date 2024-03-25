@@ -26,5 +26,5 @@ function calculateGrade() {
     passFail = 'Fail';
   }
 
-  resultElement.textContent = `The student's grade is: ${grade}. Result: ${passFail}`;
+  resultElement.innerHTML = `The student's grade is: ${grade}. Result: ${passFail}`;
 }
