@@ -42,12 +42,12 @@ body {
   }
   
   button:hover {
-    background-color: #0056b3; 
+    background-color: hsl(140, 100%, 35%); 
   }
   .result-box {
     margin-top: 20px;
     padding: 20px;
-    background-color: #1b1818;
+    background-color: #ffffff;
     border: 2px solid #ccc;
     border-radius: 1px;
     font-size: 20px;
