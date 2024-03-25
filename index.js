@@ -1,24 +1,27 @@
 function calculateGrade() {
-  let marks = parseInt(document.getElementById('marks').value);
+  let htmlMarks = parseInt(document.getElementById('html-marks').value);
+  let jsMarks = parseInt(document.getElementById('js-marks').value);
+  let cssMarks = parseInt(document.getElementById('css-marks').value);
   let resultElement = document.getElementById('result');
+  let averageMarks = (htmlMarks + jsMarks + cssMarks) / 3;
   let grade;
   let passFail;
 
-  if (isNaN(marks) || marks < 0 || marks > 100) {
-    resultElement.textContent = 'Invalid input! Please enter a number between 0 and 100.';
+  if (isNaN(averageMarks) || averageMarks < 0 || averageMarks > 100) {
+    resultElement.textContent = 'Invalid input! Please enter numbers between 0 and 100 for HTML, JavaScript, and CSS marks.';
     return;
   }
 
-  if (marks > 79) {
+  if (averageMarks > 79) {
     grade = 'A';
     passFail = 'Pass';
-  } else if (marks >= 60) {
+  } else if (averageMarks >= 60) {
     grade = 'B';
     passFail = 'Pass';
-  } else if (marks >= 50) {
+  } else if (averageMarks >= 50) {
     grade = 'C';
     passFail = 'Pass';
-  } else if (marks >= 40) {
+  } else if (averageMarks >= 40) {
     grade = 'D';
     passFail = 'Pass';
   } else {
@@ -26,5 +29,5 @@ function calculateGrade() {
     passFail = 'Fail';
   }
 
-  resultElement.innerHTML = `The student's grade is: ${grade}. Result: ${passFail}`;
+  resultElement.innerHTML = `The student's average grade is: ${grade}. Result: ${passFail}`;
 }
